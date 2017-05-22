@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+// give the path to import files. Don't need to do that for libraries sicne they are namespaces
+// files are different, have to specify relative path
+import SearchBar from './components/search_bar';
+
 const API_KEY = " APPAIzaSyDr7ynlNGEQMaD1bVk6f9LD82zIs974CCI";
 
 /*
@@ -23,7 +27,15 @@ const App = function(){
 
 // Below works the same as above code. But in ES6 syntax
 const App = () => {
-    return <div>Hello World!</div>;
+    return(
+        <div>
+            Hello World
+            <br />
+            <br />
+            <SearchBar />
+        </div>
+    );
+
 }
 
 // And instantiate of the component(cosnt App, we already had the 'class' but no object) before pass to React.createElement
